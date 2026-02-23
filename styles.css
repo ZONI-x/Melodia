@@ -1,0 +1,67 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Comic Sans MS", cursive;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(to top, #ffd6e7, #fff5fa);
+  overflow:hidden;
+}
+
+.scene{
+  text-align:center;
+  width:100%;
+  max-width:320px;
+  padding:20px;
+}
+
+/* contenedor flotante */
+.minion-container{
+  animation: float 3s ease-in-out infinite;
+  transition: transform .2s ease;
+}
+
+@keyframes float{
+  0%,100%{ transform: translateY(0); }
+  50%{ transform: translateY(-15px); }
+}
+
+/* fuerza tamaño del gif */
+.tenor-gif-embed{
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* cartel */
+.sign{
+  margin-top:22px;
+  background:white;
+  padding:16px 20px;
+  border-radius:18px;
+  font-size:20px;
+  color:#ff4d8d;
+  font-weight:bold;
+  box-shadow:0 12px 30px rgba(0,0,0,0.15);
+  animation: pop 1.2s ease;
+}
+
+
+
+@keyframes pop{
+  from{ transform: scale(0); opacity:0; }
+  to{ transform: scale(1); opacity:1; }
+}
+
+/* móvil */
+@media (max-width:480px){
+  .sign{
+    font-size:17px;
+  }
+}
